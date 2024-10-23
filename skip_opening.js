@@ -17,16 +17,17 @@ function skipOpening() {
 // Функция для создания кнопки и добавления её в интерфейс плеера
 function addSkipButton() {
     // Проверяем, существует ли панель плеера
-    let playerControls = document.querySelector('.player-panel');
+    let playerControls = document.querySelector('.player-panel__buttons'); // Здесь размещены кнопки управления
     
     if (playerControls) {
         // Создаем новую кнопку
         let skipButton = document.createElement('div');
-        skipButton.classList.add('player-panel__button', 'button', 'selector');
-        
+        skipButton.classList.add('player-panel__button', 'button', 'selector'); // Добавляем классы для навигации пульта
+        skipButton.setAttribute('tabindex', '0'); // Добавляем tabindex для возможности фокуса с пульта
+
         // Вставляем твою SVG-иконку
         skipButton.innerHTML = `
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve" width="24px" height="24px">
                 <path d="M227.5,0C101.855,0,0,101.855,0,227.5S101.855,455,227.5,455S455,353.145,455,227.5S353.145,0,227.5,0z M356.798,330h-55 v-78.981L179.64,321.575v-47.038l-81.438,47.038V133.425l81.438,47.038v-47.038l122.157,70.557V125h55V330z"/>
             </svg>
         `;
