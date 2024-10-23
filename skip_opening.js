@@ -46,3 +46,4 @@ function listenHotkeys(e) {
 
 // Запуск обработчика горячих клавиш при готовности плеера
 Lampa.Player.listener.follow('ready', startHotkeys);
+//мяу
