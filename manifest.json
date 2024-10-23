@@ -1,0 +1,9 @@
+{
+    "name": "Skip Opening",
+    "version": "1.0",
+    "description": "A plugin to skip anime openings by 1 minute 25 seconds on Lampa by pressing the 8 button on the remote.",
+    "author": "Phobos",
+    "permissions": ["video_control"],
+    "main": "skip_opening.js"
+  }
+  
